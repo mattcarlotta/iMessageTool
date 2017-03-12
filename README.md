@@ -1,4 +1,4 @@
-# iMessageTool
+# iMessageTool v2.1.0
 
 Introduction
 
