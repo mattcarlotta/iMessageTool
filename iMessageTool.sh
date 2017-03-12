@@ -23,7 +23,7 @@ errNum=0
 # Get current user
 gUSER=$(stat -f%Su /dev/console)
 
-# Macgen path, will be overrided by load_macgen
+# Macgen path that will be overriden by load_macgen
 gpathMG=""
 
 # MLB serial name
