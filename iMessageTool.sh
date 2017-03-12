@@ -23,16 +23,13 @@ errNum=0
 # Get current user
 gUSER=$(stat -f%Su /dev/console)
 
-# User's current directory
-gRepo="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-# Kext path, will be overrided by _find_kext()
+# Macgen path, will be overrided by load_macgen
 gpathMG=""
 
-# Kext name
+# MLB serial name
 gMG="mg-mlb-serial"
 
-# AII.kext Repo
+# MacGen Repo
 gRacerMG="https://github.com/theracermaster/MacGen"
 
 #===============================================================================##
