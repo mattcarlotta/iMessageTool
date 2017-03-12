@@ -8,7 +8,7 @@ You can download the latest version of iMessageTool to your Desktop by entering 
 ```
 curl -o ~/Desktop/iMessageTool.sh https://raw.githubusercontent.com/mattcarlotta/iMessageTool/master/iMessageTool.sh
 ```
-You can then verify the downloaded size (should be about 6kb):
+You can then verify the downloaded size (should be about 8kb):
 ```
 wc -c ~/Desktop/iMessageTool.sh
 ```
