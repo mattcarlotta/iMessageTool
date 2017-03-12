@@ -106,9 +106,9 @@ function load_macgen()
 {
   printf " \n"
   printf "${gMG} was successfully loaded...\n"
+  printf " \n"
   chown $gUSER $gdirectoryMG
   gpathMG="${gdirectoryMG}/${gMG}"
-  printf " \n"
   ${gpathMG}
 }
 
