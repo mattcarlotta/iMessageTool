@@ -121,7 +121,7 @@ function find_macgen()
   local gdirectoryMG="$HOME/Desktop/MacGen"
 
   printf " \n"
-  printf "Searching for the MacGen directory on the Desktop...\n"
+  printf "Searching for the MacGen folder on the Desktop...\n"
   if [[ ! -d "${gdirectoryMG}" ]];
     then
       printf " \n"
