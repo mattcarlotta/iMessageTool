@@ -103,56 +103,6 @@ esac
 }
 
 #===============================================================================##
-## REBOOT COMPUTER #
-##==============================================================================##
-function reboot_computer()
-{
-  printf '\n'
-  read -p "Would you like to reboot now? (y/n) " choice
-    case "$choice" in
-    # user requests reboot
-    y|Y )
-    reboot now
-    ;;
-    # user refuses reboot, terminate script
-    n|N )
-    printf "\n"
-    printf "It’s highly recommended that you restart your computer as soon as possible!\n"
-    printf "\n"
-    exit 1
-    ;;
-    # oops - user made a mistake, terminate script anyway
-    * )
-    printf "\n"
-    printf '*—-ERROR—-* Invalid choice! If deleting the iMessage caches was successful,\n'
-    printf 'then it’s highly recommended that you restart your computer as soon as possible!\n'
-    printf "\n"
-    printf 'Script was aborted!\n'
-    exit 1
-    ;;
-    esac
-}
-
-#===============================================================================##
-## DELETE IMESSAGE CACHES #
-##==============================================================================##
-function del_caches()
-{
-  # remove cache folders in Library/Caches
-  cd ~/Library/Caches
-  rm -rf com.apple.iCloudHelper com.apple.imfoundation.IMRemoteURLConnectionAgent com.apple.Messages
-  # remove files from Library/Preferences
-  cd ~/Library/Preferences
-  rm com.apple.iChat* com.apple.icloud* com.apple.ids.service* com.apple.imagent* com.apple.imessage* com.apple.imservice*
-  # remove messages from library/messages
-  find ~/Library/Messages/ -mindepth 1 -delete
-  printf '\n'
-  printf 'All related iMessage files and folders have been successfully removed!\n'
-  sleep 0.25
-  reboot_computer
-}
-
-#===============================================================================##
 ## Load MacGen #
 ##==============================================================================##
 function load_macgen()
@@ -207,6 +157,56 @@ function generate_ids()
         printf "%s" "$i: "
         uuidgen
       done
+}
+
+#===============================================================================##
+## REBOOT COMPUTER #
+##==============================================================================##
+function reboot_computer()
+{
+  printf '\n'
+  read -p "Would you like to reboot now? (y/n) " choice
+    case "$choice" in
+    # user requests reboot
+    y|Y )
+    reboot now
+    ;;
+    # user refuses reboot, terminate script
+    n|N )
+    printf "\n"
+    printf "It’s highly recommended that you restart your computer as soon as possible!\n"
+    printf "\n"
+    exit 1
+    ;;
+    # oops - user made a mistake, terminate script anyway
+    * )
+    printf "\n"
+    printf '*—-ERROR—-* Invalid choice! If deleting the iMessage caches was successful,\n'
+    printf 'then it’s highly recommended that you restart your computer as soon as possible!\n'
+    printf "\n"
+    printf 'Script was aborted!\n'
+    exit 1
+    ;;
+    esac
+}
+
+#===============================================================================##
+## DELETE IMESSAGE CACHES #
+##==============================================================================##
+function del_caches()
+{
+  # remove cache folders in Library/Caches
+  cd ~/Library/Caches
+  rm -rf com.apple.iCloudHelper com.apple.imfoundation.IMRemoteURLConnectionAgent com.apple.Messages
+  # remove files from Library/Preferences
+  cd ~/Library/Preferences
+  rm com.apple.iChat* com.apple.icloud* com.apple.ids.service* com.apple.imagent* com.apple.imessage* com.apple.imservice*
+  # remove messages from library/messages
+  find ~/Library/Messages/ -mindepth 1 -delete
+  printf '\n'
+  printf 'All related iMessage files and folders have been successfully removed!\n'
+  sleep 0.25
+  reboot_computer
 }
 
 #===============================================================================##
