@@ -12,7 +12,7 @@ You can then verify the downloaded size (should be about 8kb):
 ```
 wc -c ~/Desktop/iMessageTool.sh
 ```
-Then, you must change the file permissions to make it executable:
+You must change the file permissions to make it executable:
 ```
 chmod +x ~/Desktop/iMessageTool.sh
 ```
@@ -25,6 +25,7 @@ Commands:
 ```
 dic (will delete iMessage caches)
 idgen (will generate SmUUIDs)
+macgen (will generate a unique MLB serial)
 help (will display instructions)
 exit (will exit the script)
 ```
