@@ -2,7 +2,7 @@
 
 Introduction
 
-iMessageTool is a simple automated bash script that either deletes iMessage files and folders stored within a user's "Library" folder OR generates 20 unique ids(SmUUIDs).
+iMessageTool is a simple automated bash script that: Deletes iMessage files and folders stored within a user's "Library" folder, generates 20 unique ids(SmUUIDs), or generates a unique MLB serial via <a href="https://github.com/theracermaster/MacGen">MacGen</a>.
 
 You can download the latest version of iMessageTool to your Desktop by entering the following command in a terminal window:
 ```
